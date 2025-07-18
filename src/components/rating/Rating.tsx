@@ -1,8 +1,10 @@
+import {Star} from "./Star.tsx";
+
 type RatingPropsType = {
     value: 0 | 1 | 2 | 3 | 4 | 5;
 }
 
-export function Rating(props: RatingPropsType) {
+export const Rating =(props: RatingPropsType) => {
     if (props.value === 0) {
     return (
         <div>
@@ -69,18 +71,4 @@ export function Rating(props: RatingPropsType) {
             </div>
         )
     }
-}
-
-
-type StarPropsType = {
-    selected: boolean;
-}
-
-function Star(props: StarPropsType) {
-    if (props.selected) {
-        return <span><b>star </b></span>
-    } else {
-        return <span>star </span>
-    }
-
 }

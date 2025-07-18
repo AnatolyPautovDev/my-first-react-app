@@ -1,5 +1,6 @@
-import Accordion from "./components/Accordion/Accordion.tsx";
-import {Rating} from "./components/Rating/Rating.tsx";
+import Accordion from "./components/accordion/Accordion.tsx";
+import {Rating} from "./components/rating/Rating.tsx";
+import {PageTitle} from "./components/pageTitle/PageTitle.tsx";
 
 
 function App() {
@@ -12,13 +13,6 @@ function App() {
             <Rating value={3}/>
         </div>
     )
-}
-type PageTitlePropsType = {
-    title: string,
-}
-
-function PageTitle(props: PageTitlePropsType) {
-    return <h1>{props.title}</h1>
 }
 
 export default App
