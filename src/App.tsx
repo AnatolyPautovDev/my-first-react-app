@@ -2,6 +2,8 @@ import Accordion from "./components/accordion/Accordion.tsx";
 import {Rating} from "./components/rating/Rating.tsx";
 import {PageTitle} from "./components/pageTitle/PageTitle.tsx";
 import {OnOff} from "./components/onOff/OnOff.tsx";
+import {UncontrolledAccordion} from "./components/uncontrolledAccordion/UncontrolledAccordion.tsx";
+import {UncontrolledRating} from "./components/uncontrolledRating/UncontrolledRating.tsx";
 
 
 function App() {
@@ -12,8 +14,9 @@ function App() {
             <Rating value={5}/>
             <Accordion titleValue={'Menu'} collapsed={true}/>
             <Rating value={3}/>
-            <OnOff work={false}/>
-            <OnOff work={true}/>
+            <OnOff/>
+            <UncontrolledAccordion titleValue={'Menu'}/>
+            <UncontrolledRating/>
         </div>
     )
 }
