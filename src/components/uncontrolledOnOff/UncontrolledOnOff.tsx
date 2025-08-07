@@ -1,9 +1,7 @@
-type Props = {
-    on: boolean
-    setOn: (on: boolean) => void
-}
+import {useState} from "react";
 
-export const OnOff = ({on, setOn}:Props) => {
+export const UncontrolledOnOff = () => {
+    const [on, setOn] = useState<boolean>(false)
 
     const onStyle = {
         width: '30px',

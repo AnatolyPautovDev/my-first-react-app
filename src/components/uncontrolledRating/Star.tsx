@@ -8,8 +8,7 @@ export const Star = (props: StarPropsType) => {
         cursor: 'pointer',
     }
 
-    return props.selected ?
-        <span onClick={props.onClick} style={spanStyle}><b>star </b></span>
-        :
-        <span onClick={props.onClick} style={spanStyle}>star </span>
+    return <span onClick={props.onClick} style={spanStyle}>
+        {props.selected ? <b>star </b> : "star "}
+    </span>
 }

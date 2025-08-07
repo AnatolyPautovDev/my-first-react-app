@@ -22,8 +22,8 @@ type AccordionTitlePropsType = {
     onClick?: () => void,
 }
 
-function AccordionTitle(props: AccordionTitlePropsType) {
-    return <h3 onClick={props.onClick}>---{props.title}---</h3>
+function AccordionTitle({title, onClick}: AccordionTitlePropsType) {
+    return <h3 onClick={onClick}>---{title}---</h3>
 }
 
 function AccordionBody() {
