@@ -1,9 +1,14 @@
 import {Star} from "./Star.tsx";
 import {useState} from "react";
+import type {RatingValueType} from "../rating/Rating.tsx";
 
-export const UncontrolledRating =() => {
+type Props = {
+  defaultValue?: RatingValueType
+}
 
-    const [value, setValue] = useState(0);
+export const UncontrolledRating =({defaultValue}:Props) => {
+
+    const [value, setValue] = useState<RatingValueType>(defaultValue ? defaultValue : 0);
 
     return (
         <div>
